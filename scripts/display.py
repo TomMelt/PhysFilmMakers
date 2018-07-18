@@ -1,11 +1,13 @@
 import curses
 import traceback
 import time
+from measure import get_readings
+from sound import playsound
 
 
-def get_readings():
-    temp = time.localtime(time.time()).tm_sec
-    return temp, temp, temp
+#def get_readings():
+#    temp = time.localtime(time.time()).tm_sec
+#    return temp, temp, temp
 
 
 def draw_screen(stdscr):
@@ -31,10 +33,16 @@ def draw_screen(stdscr):
         # Get current value of current, voltage and power
         I, V, P = get_readings()
 
+        I = round(I,2)
+        V = round(V,1)
+
+        if I > 0.3:
+            playsound(FREQUENCY=int(600*(1+I)))
+
         # Declaration of strings
         sub1 = "Current : {0:5.3f} mA".format(I)
         sub2 = "Voltage : {0:5.3f} V ".format(V)
-        sub3 = "Power   : {0:5.3f} W ".format(P)
+        sub3 = "Power   : {0:5.3f} mW".format(P)
         statusbarstr = "Press 'CTRL-C' to exit"
 
         # Centering calculations
