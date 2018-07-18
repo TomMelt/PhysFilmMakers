@@ -17,4 +17,4 @@ def get_readings():
     p = ina.power()
 #    print('{0:0.1f}V\n{1:0.1f}mA'.format(v, i))
 #    print('\n{0:0.1f} Watts'.format(p/1000))
-    return i, v, p/1000.
+    return i, v, p
