@@ -1,4 +1,4 @@
-PhysFilmMakers
+Phys FilmMakers
 ==============
 
 Outreach Project with local school
@@ -9,4 +9,36 @@ Outreach Project with local school
 
 `measure.py` - program returns current (mA), voltage (V) and power (mW) using the INA219 breakout board.
 
-`pong.py` - a fun game which uses the measured current to move the players curser.
+`pong.py` - a fun game which uses the measured current to move the players cursor.
+
+Project Plan
+============
+
+## Carbon Allotropes
+- graphite
+- diamond
+- amorphous
+- other?
+
+## Graphite
+- structure and properties
+
+## Electrical Circuits (recap)
+- V = IR
+- P = IV
+- &rho; = RA/l
+- &sigma; = 1/&rho; 
+- Conductivity
+
+## Draw Circuit
+- LED
+- Buzzer
+
+## Measure Properties
+
+## Make Predictions
+
+## Explore Variable Resistors
+- pressure sensors
+- microphones?
+- game controllers?
