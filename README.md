@@ -3,8 +3,10 @@ PhysFilmMakers
 
 Outreach Project with local school
 
-```display.py``` - program to display the current, voltage and power in the circuit.
+`display.py` - program to display the current, voltage and power in the circuit.
 
-```sound.py``` - program to output a specific frequency sound based on a voltage reading.
+`sound.py` - program to output a specific frequency sound based on a voltage reading.
 
-```measure.py``` - program returns current (mA), voltage (V) and power (mW) using the INA219 breakout board.
+`measure.py` - program returns current (mA), voltage (V) and power (mW) using the INA219 breakout board.
+
+`pong.py` - a fun game which uses the measured current to move the players curser.

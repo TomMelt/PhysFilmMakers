@@ -15,6 +15,7 @@ def draw_screen(stdscr):
     # Clear and refresh the screen for a blank canvas
     stdscr.clear()
     stdscr.refresh()
+    stdscr.nodelay(1)
 
     # Start colors in curses
     curses.start_color()
@@ -43,7 +44,7 @@ def draw_screen(stdscr):
         sub1 = "Current : {0:5.3f} mA".format(I)
         sub2 = "Voltage : {0:5.3f} V ".format(V)
         sub3 = "Power   : {0:5.3f} mW".format(P)
-        statusbarstr = "Press 'CTRL-C' to exit"
+        statusbarstr = "Press '<Esc>' or 'q' to exit"
 
         # Centering calculations
         start_x_title = int((width // 2) - (len(title) // 2) - len(title) % 2)
@@ -80,6 +81,14 @@ def draw_screen(stdscr):
 
         # Refresh the screen
         stdscr.move(0, 0)
+
+        key = stdscr.getch()
+        if key == 27 or key == ord('q'):
+            curses.echo()
+            curses.nocbreak()
+            curses.endwin()
+            break
+
         stdscr.refresh()
 
 
